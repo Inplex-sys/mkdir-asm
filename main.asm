@@ -1,5 +1,5 @@
 section .data
-    pathname db 'pathname', 0
+    pathname db 'directory_name', 0
     message db 'Directory created successfully', 0
     prompt db 'create a directory [enter pathname]> ', 0
     null db 0
@@ -42,6 +42,6 @@ create_dir:
 
 exit_program:
     ; Exit the program
-    mov eax, 60 ; sys_exit system call
-    xor edi, edi ; exit code 0
-    syscall ; invoke the system call
+    mov eax, 60
+    xor edi, edi
+    syscall
